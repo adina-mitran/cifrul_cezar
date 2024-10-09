@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+   <title>Cifrul lui Cezar - descriere</title>
+   <meta charset="UTF-8">
+   <meta name="keywords" content="HTML, CSS, Cifrul lui Cezar, Ceaser's Cipher, Codul lui Cezar">
+   <meta name="description" content="Ceaser's Cipher -- Proiect pentru atestatul de informatica">
+   <meta name="keywords" content="HTML,CSS">
+   <meta name="author" content="Adina Mitran">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bitter:ital@0;1&family=Cabin+Sketch:wght@400;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet">
+   <style>
+      .font-raleway {
+         font-family: "Raleway", sans-serif;
+         font-optical-sizing: auto;
+         font-weight: 500;
+         font-style: normal;
+      }
+
+
+      .cabin-sketch-regular {
+         font-family: "Cabin Sketch", sans-serif;
+         font-weight: 400;
+         font-style: normal;
+      }
+
+      .cabin-sketch-bold {
+         font-family: "Cabin Sketch", sans-serif;
+         font-weight: 700;
+         font-style: normal;
+      }
+
+
+      menu {
+         list-style-type: none;
+         margin: 0;
+         padding: 0;
+         overflow: hidden;
+         background-color: rgba(255, 255, 255, 0.5);
+         color: rgb(40, 0, 52);
+         font-family: Raleway, sans-serif;
+         font-weight: bold;
+      }
+
+      li {
+         float: left;
+      }
+
+      li a {
+         display: block;
+
+
+         text-align: center;
+         padding: 14px 16px;
+         text-decoration: none;
+      }
+
+      a:hover {
+         color: white;
+         background-color: rgb(0, 76, 153);
+      }
+
+      .active {
+         background-color: rgba(214, 150, 256, 0.8);
+         text-decoration: rgb(51, 0, 102) wavy underline;
+      }
+
+      body {
+         background-image: url('rm314-adj-10.jpg');
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+         background-size: cover;
+         margin-top: 30px;
+         font-size: 100%;
+         font-family: Raleway, sans-serif;
+
+      }
+
+      h1 {
+         color: rgb(86, 101, 115);
+         font-size: 400%;
+         font-weight: bold;
+
+      }
+
+      h2 {
+         color: rgb(86, 101, 115);
+         font-size: 200%;
+      }
+
+      h3 {
+         color: rgb(86, 101, 115);
+         font-size: 150%;
+      }
+
+      p {
+         font-size: 120%;
+      }
+
+      body {
+         background-image: url('rm314-adj-10.jpg');
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+         background-size: cover;
+         margin-top: 30px;
+         font-size: 100%;
+      }
+
+      .flex-container {
+         display: flex;
+         background-color: rgba(255, 255, 255, 0.5);
+         overflow: auto;
+      }
+
+      .flex-container>div {
+         display: flex;
+         flex-direction: column;
+         margin: 10px;
+         padding: 20px;
+      }
+
+      mark {
+         background-color: #00FFFF;
+      }
+
+      .relative {
+         position: relative;
+         left: 50px;
+      }
+   </style>
+
+</head>
+
+
+<body>
+
+
+   <header>
+      <menu>
+
+         <li><a>Menu</a></li>
+         <li style="float:right"><a href="pagina_cod_ht.html">Încearcă și tu</a></li>
+         <li style="float:right"><a class="active" href="pagina_despre_ht.html">Despre Cifrul lui Cezar</a></li>
+         <li style="float:right"><a href="pagina_acasa_ht.html">Acasă</a></li>
+
+      </menu>
+   </header>
+
+
+
+   <main>
+
+
+      <h1>Cifrul lui <span style="font-family: Cabin Sketch, sans-serif; font-size:170%; ">Cezar</span></h1>
+
+
+      <div>
+         <p> Ce este <a href="https://ro.wikipedia.org/wiki/Cifrul_Cezar" target="_blank">cifrul lui Cezar</a>? <br />
+            Cifrul lui Cezar, cunoscut și sub numele de cifru cu deplasare sau cifru al substituției, reprezintă una
+            dintre cele mai familiare tehnici de criptare. În acest procedeu, fiecare literă din textul original este
+            înlocuită cu alta din alfabet, situată la o anumită distanță fixă în ordine. De exemplu, în cazul unei
+            deplasări de trei poziții în alfabetul limbii engleze, litera A devine D, B devine E și așa mai departe.
+            Acest procedeu poartă numele lui Iulius Cezar, care l-a utilizat pentru a comunica cu generalii săi. <br />
+            Conform lui <a href="https://ro.wikipedia.org/wiki/Suetoniu" target="_blank">Suetoniu</a>, îl folosea cu o
+            deplasare de 3 pentru protejarea mesajelor cu importanță militară: </p>
+         <blockquote>
+            <p style="padding-left:30px; padding-right: 70px;"><em>Dacă avea ceva confidențial de comunicat, scria încifrat, adică schimba
+                  ordinea
+                  literelor din alfabet, astfel încât nu se putea înțelege nici un cuvânt. Dacă cineva dorește să
+                  descifreze și să înțeleagă, trebuie să înlocuiască a patra literă din alfabet, adică D, cu A, și
+                  așa mai departe pentru celelalte. </em> <br /> —Suetoniu, Viața lui Iulius Cezar 56
+            </p>
+         </blockquote>
+      </div>
+
+      <div>
+         <p style="margin: 0px;">Transformarea poate fi reprezentată printr-o aliniere a două alfabete:</p>
+         <p style="margin: 0px; padding: 0px; padding-left:30px; color: #00562d">
+            cheia: 3
+            <br />alfabet englez: ABCDEFGHIJKLMNOPQRSTUVWXYZ
+            <br />alfabet criptat: DEFGHIJKLMNOPQRSTUVWXYZABC
+
+         </p>
+      </div>
+      <p>
+         Pentru a decripta mesajul, destinatarul trebuie să știe deplasarea utilizată și să aplice operația inversă: să
+         înlocuiască fiecare literă criptată cu litera corespunzătoare din alfabetul original. <br />
+
+         Este important de menționat că acest cifru este <mark>foarte simplu și ușor de spart</mark>, deoarece există
+         doar 25 de combinații posibile (pentru alfabetul englezesc), ceea ce face ca criptarea să fie vulnerabilă la
+         atacuri brute force sau analize de frecvență.
+      </p>
+
+      <div class="flex-container">
+         <div>
+            <h2>Criptează Mesajul</h2>
+            <h3>Codul in c++ pentru criptare</h3>
+
+            <div class="box" ; style="background-color: rgba(255, 255, 255, 0.5); padding: 10px; font-size:120%;">
+               <pre> <code>
+  for(i=0;i&lt;l;i++)
+	  if(s[i]!=' ')
+	  {
+		  if(s[i]&gt;='a' &amp;&amp; s[i]&lt;='z')
+		  {
+			  c=s[i]+n;
+			  if(c&gt;'z')
+				  c=c-26;
+			  s[i]=(char)c;
+		  }
+		  else if(s[i]&gt;='A' &amp;&amp; s[i]&lt;='Z')
+		  {
+			  c=s[i]+n;
+			  if(c&gt;'Z')
+				  c=c-26;
+			  s[i]=(char)c;
+		  }
+	  }
+	              </code> </pre>
+            </div>
+         </div>
+
+         <div>
+            <h2>Decriptează Mesajul</h2>
+            <h3>Codul in c++ pentru decriptare</h3>
+
+            <div class="box" ; style="background-color: rgba(255, 255, 255, 0.5); padding: 10px; font-size:120%;">
+               <pre> <code> 
+  for(i=0;i&lt;l;i++)
+	  if(s[i]!=' ')
+	  {
+		  if(s[i]&gt;='a' &amp;&amp; s[i]&lt;='z')
+		  {
+			  c=s[i]-n;
+			  if(c&lt;'a')
+				  c=c+26;
+			  s[i]=(char)c;
+		  }
+		  else if(s[i]&gt;='A' &amp;&amp; s[i]&lt;='Z')
+		  {
+			  c=s[i]-n;
+			  if(c&lt;'A')
+				  c=c+26;
+			  s[i]=(char)c;
+		  }
+	  }
+	 </code> </pre>
+            </div>
+
+         </div>
+
+      </div>
+
+
+
+
+
+
+
+   </main>
+
+
+</body>
+
+</html>
